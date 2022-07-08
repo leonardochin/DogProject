@@ -600,35 +600,6 @@ darkgrey;">Designed by Ryan with Bootstrap</span></div>
             showLauncher: true,
             onLoad: function (instance) {
 
-                // Detect location
-                function handleLocationSend(event) {
-                    console.log('On entry to pre:send: ', event.data);
-                    if (event.data.input.text === "Detect location") {
-                        //  Creating a promise out of the function
-                        //  Using Navigator to obtain current user location
-                        return new Promise((resolve, reject) => {
-                            if (navigator.geolocation) {
-                                navigator.geolocation.getCurrentPosition(function (position) {
-
-                                    lat = position.coords.latitude
-                                    long = position.coords.longitude
-
-                                    console.log('Before updating location: ', event.data.context.skills['main skill'].user_defined.location);
-                                    event.data.context.skills['main skill'].user_defined.latitude = lat;
-                                    event.data.context.skills['main skill'].user_defined.longitude = long;
-                                    event.data.context.skills['main skill'].user_defined.location = true;
-                                    console.log('After updating location: ', event.data.context.skills['main skill'].user_defined.location);
-                                    resolve({
-                                    })
-                                })
-                            } else {
-                                reject("Your browser doesn't support geolocation API")
-                            }
-                        })
-                    }
-                }
-                instance.on({ type: "pre:send", handler: handleLocationSend });
-
                 // Select the button element from the page.
                 const button = document.querySelector('.chatLauncher');
 
