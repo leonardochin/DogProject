@@ -613,15 +613,11 @@ darkgrey;">Designed by Ryan with Bootstrap</span></div>
                                     lat = position.coords.latitude
                                     long = position.coords.longitude
 
-                                    console.log('Before updating location: ', event.data.context.skills['main 
-
-skill'].user_defined.location);
+                                    console.log('Before updating location: ', event.data.context.skills['main skill'].user_defined.location);
                                     event.data.context.skills['main skill'].user_defined.latitude = lat;
                                     event.data.context.skills['main skill'].user_defined.longitude = long;
                                     event.data.context.skills['main skill'].user_defined.location = true;
-                                    console.log('After updating location: ', event.data.context.skills['main 
-
-skill'].user_defined.location);
+                                    console.log('After updating location: ', event.data.context.skills['main skill'].user_defined.location);
 
                                     resolve({
                                     })
