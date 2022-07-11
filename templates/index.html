@@ -22,15 +22,16 @@
     <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" 
-
-type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet" type="text/css" />
     
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="https://drive.google.com/uc?export=view&id=1Owy3w8C7fEJ6aV4cBEVaGvuUO0dZRJOL" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body id="page-top">
@@ -82,7 +83,11 @@ type="text/css" />
                                         <!--Display: Image Upload-->
                                             <div class="drop-zone">
                                                 <spans>Click to upload</spans>
+                                                        <input type=file name=file>
+                                                        <input type=submit value=Upload>
+                                                <!--
                                                 <input type="file" name="file1" class="drop-zone__input" required="required" accept="image/*" onchange='if (this.value != 0) { this.form.submit(); this.form.reset(); }'>
+                                                -->
                                             </div>
                                     </form>
                                 </div>
